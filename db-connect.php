@@ -1,8 +1,9 @@
 <?php
+  function dataConn(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "to-do-list";
+    $database = "to_do_list";
 
     //<!-- laad hier via php de juiste contentpagina in (vanuit de pages map) in. Welke geselecteerd moet worden kun je uit de URL halen (URL_Params).-->
 
@@ -16,5 +17,6 @@
     {
         echo "Connection failed: " . $e->getMessage();
     }
-
+    return $conn;
+  };
 ?>

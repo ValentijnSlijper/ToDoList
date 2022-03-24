@@ -56,7 +56,10 @@ function makeButtonsClickable(elements) {
       element.onclick = function() {
         selectedName = document.getElementById(element.id);
         // console.log(selectedName);
-        checkClicked();
+        // checkClicked();
+        selectIMG(element.id);
+        selectNAME(element.id);
+        console.log(id);
       }
   })
 }
@@ -71,20 +74,44 @@ makeButtonsClickable(buttons1);
 
 
 
-function checkClicked(){
-  if (selectedimg != undefined || selectedimg != "" || selectedName != undefined || selectedName != "") {
-      // verglijk slectedName met name selectedimg
 
-  var removeClass = document.getElementsByClassName("selected");
-  console.log(removeClass);
-  for (var i = 0; i < removeClass.length; i++) {
+function selectIMG(id){
+  if (selectedimg == undefined ){
+    var removeClass = document.getElementsByClassName("selected");
+    console.log(removeClass);
+      for (var i = 0; i < removeClass.length; i++) {
       removeClass[i].classList.remove("selected");
-  }
-  document.getElementById(selectedName.id).classList.add("selected");
-  document.getElementById(selectedimg.id).classList.add("selected");
-  // console.log("slebba");
-  }
+      }
+    document.getElementById(selectedimg.id).classList.add("selected");
+    }
 }
+function selectNAME(id){
+  if (selectedName == undefined ){
+    var removeClass = document.getElementsByClassName("selected");
+    console.log(removeClass);
+      for (var i = 0; i < removeClass.length; i++) {
+      removeClass[i].classList.remove("selected");
+      }
+    document.getElementById(selectedName.id).classList.add("selected");
+    }
+}
+
+
+
+// function checkClicked(){
+//   if (selectedimg != undefined || selectedimg != "" || selectedName != undefined || selectedName != "") {
+//       // verglijk slectedName met name selectedimg
+//
+//   var removeClass = document.getElementsByClassName("selected");
+//   console.log(removeClass);
+//   for (var i = 0; i < removeClass.length; i++) {
+//       removeClass[i].classList.remove("selected");
+//   }
+//   document.getElementById(selectedName.id).classList.add("selected");
+//   document.getElementById(selectedimg.id).classList.add("selected");
+//   // console.log("slebba");
+//   }
+// }
 
 
 
@@ -144,10 +171,10 @@ for (var i = 0; i < pictures.length; i++) {
 
 
 
-function compare(id){
-  console.log(id);
-  var compairecheck;
-
-  // if (name != undefind && buttons != undefind){}
-
-}
+// function compare(id){
+//   console.log(id);
+//   var compairecheck;
+//
+//   // if (name != undefind && buttons != undefind){}
+//
+// }
